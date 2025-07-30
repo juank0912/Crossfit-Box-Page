@@ -1,26 +1,28 @@
-import { use } from "react";
 import { Link } from "@tanstack/react-router";
-import icon from "../../assets/logo192.png";
+import icon from "../../assets/icon.png";
+import "./header-styles.css";
 
 export default function Header() {
   return (
     <nav>
-      <Link to={"/"}>
-        <img src={icon} alt="Crossfit box page logo" />
-        <h1 className="logo">Crossfit Box Page header</h1>
-      </Link>
-      <ul>
+      <div className="logo">
+        <Link to={"/"}>
+          <img src={icon} alt="Crossfit box page logo" />
+          <h1 className="brand">Kamus Barbell Club</h1>
+        </Link>
+      </div>
+      <ul className="navLinks">
         <li>
-          <Link to={"/precios"}>Precios</Link>
+          <Link to={"/#precios"}>Precios</Link>
         </li>
         <li>
-          <Link to={"/clases"}>Clases</Link>
+          <Link to={"/#clases"}>Clases</Link>
         </li>
         <li>
-          <Link to={"/quienesSomos"}>¿Y estos locos?</Link>
+          <Link to={"/#quienesSomos"}>¿Y estos locos?</Link>
         </li>
         <li>
-          <Link to={"/contactanos"}>Contactanos</Link>
+          <Link to={"/#contactanos"}>Contactanos</Link>
         </li>
       </ul>
     </nav>

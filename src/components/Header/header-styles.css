@@ -1,0 +1,118 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5px;
+    margin: 0 5%;
+    position: relative;
+    background-color: #ffffff;
+    /* border: 3px solid #ccc; */
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav .logo a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+nav .logo img {
+    padding: 3%;
+    width: 15%;
+}
+
+.navLinks {
+    grid-column: span 2 / span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    padding: 15px;
+    gap: 1rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navLinks li {
+    padding: 8px;
+}
+
+
+/* animacion links navbar ini*/
+.navLinks li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f60102;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+
+.navLinks li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+.navLinks li a {
+    font-size: 25px;
+    -webkit-transition: color 0.5s, font-size 0.5s;
+    -moz-transition: color 0.5s, font-size 0.5s;
+    -o-transition: color 0.5s, font-size 0.5s;
+    transition: color 0.5s, font-size 0.5s;
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+}
+
+.navLinks li a:hover {
+    color: #212cff;
+    font-size: 28px;
+}
+
+/* animacion links navbar fin*/
+
+/* animacion para el branding ini */
+
+.brand::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f60102;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+
+.brand:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.brand {
+    display: inline-block;
+    position: relative;
+    -webkit-transition: color 0.5s, font-size 0.5s;
+    -moz-transition: color 0.5s, font-size 0.5s;
+    -o-transition: color 0.5s, font-size 0.5s;
+    transition: color 0.5s, font-size 0.5s;
+}
+
+.brand:hover {
+    color: #212cff;
+    font-size: 3rem;
+}
+
+/* animacion para el branding fin */
